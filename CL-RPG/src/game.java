@@ -4,7 +4,10 @@
 public class game {
 	
 	public static void main(String[] args) {
-		new createchar();
+		createchar createChar = new createchar();
+		
+		//pass data to character object
+		new character(createChar.fetchUserData());
 		
 	}
 	

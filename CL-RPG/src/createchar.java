@@ -15,6 +15,7 @@ public class createchar{
 	Scanner input = new Scanner(System.in);
 	String[] classes = null;
 	String[] classData;
+	
 	int amountClasses;
 	String name;
 	Integer classInt = 0;
@@ -61,7 +62,7 @@ public class createchar{
 		}
 		while(Bln == false);
 		
-		getUserStats(classInt);
+		getUserStats(classInt-1);
 		
 	}
 	
@@ -226,7 +227,8 @@ public class createchar{
 	
 	public String[] fetchUserData(){
 		String classString = Integer.toString(classInt);
-		String[] returnUserData = {name, classString, classData[0], classData[1],classData[2],classData[3],classData[4],classData[4],classData[5],};
+		String[] returnUserData;
+		returnUserData = new String[]{name, classString, classData[0], classData[1],classData[2],classData[3],classData[4],classData[4],classData[5],};
 		return returnUserData;
 		
 	}
