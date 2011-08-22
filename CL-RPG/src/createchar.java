@@ -16,15 +16,17 @@ public class createchar{
 	String[] classes = null;
 	String[] classData;
 	int amountClasses;
+	String name;
+	Integer classInt = 0;
 	
 	public createchar(){
 		
 		//get class names and id from XML file
 		getClassName();
 		
-		String name;
+		
 		String userClass;
-		Integer classInt = 0;
+		
 		System.out.println("Choose your name:");
 		name = input.nextLine();
 		boolean Bln = true;
@@ -222,5 +224,11 @@ public class createchar{
         
 	}
 	
+	public String[] fetchUserData(){
+		String classString = Integer.toString(classInt);
+		String[] returnUserData = {name, classString, classData[0], classData[1],classData[2],classData[3],classData[4],classData[4],classData[5],};
+		return returnUserData;
+		
+	}
 	
 }
