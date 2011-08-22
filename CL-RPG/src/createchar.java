@@ -18,7 +18,7 @@ public class createchar {
 			System.out.println("1. Warrior");
 			System.out.println("2. Mage");
 			System.out.println("3. Thief");
-			System.out.println("4. Healer");
+			System.out.println("4. Healer2");
 			userClass = input.nextLine();
 			
 			// probeer om string Userclass om te zetten naar integer
