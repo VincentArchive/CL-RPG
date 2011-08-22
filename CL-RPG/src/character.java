@@ -21,27 +21,32 @@ public class character {
 		magicresitance = Integer.parseInt( userData[7] ); 
 		System.out.println("Welcome "+ name);
 		showStats();
-		pauseProg();
-		System.out.println("lalala");
+		showMenu();
 	}
 	
 	public static void pauseProg(){
 		System.out.println("Press enter to continue...");
 		Scanner keyboard = new Scanner(System.in);
 		keyboard.nextLine();
+		for(int i=0;i < 10; i++){
+			System.out.println("");
+		}
 	}
 	
 	public static void showStats(){
 		System.out.println("Your stats are");
-		System.out.println("strength "+ strength);
-		System.out.println("stamina "+ stamina);
-		System.out.println("inteligence "+ inteligence);
-		System.out.println("spirit "+ spirit);
-		System.out.println("physresitance "+ physresitance);
-		System.out.println("magicresitance "+ magicresitance);
+		if(strength != 0){System.out.println("strength "+ strength); }
+		if(stamina != 0)System.out.println("stamina "+ stamina);
+		if(inteligence != 0)System.out.println("inteligence "+ inteligence);
+		if(spirit != 0)System.out.println("spirit "+ spirit);
+		if(physresitance != 0)System.out.println("physresitance "+ physresitance);
+		if(magicresitance != 0)System.out.println("magicresitance "+ magicresitance);
+		pauseProg();
 	}
 	
-	
+	public static void showMenu(){
+		
+	}
 	
 	
 }
