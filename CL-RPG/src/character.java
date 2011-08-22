@@ -38,8 +38,5 @@ public class character {
 		menu.pauseProg();
 	}
 	
-	
-	
-	
-	
+		
 }
