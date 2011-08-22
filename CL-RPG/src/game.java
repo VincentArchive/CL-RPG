@@ -7,7 +7,7 @@ public class game {
 		createchar createChar = new createchar();
 		
 		//createChar.askName();
-		createChar.askClass();
+		
 		
 	}
 	
