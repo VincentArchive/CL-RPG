@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skills>
+<skill>
+	<name>Rage</name>
+	<classid>0</classid>
+	<description>Increase strength</description>
+</skill>
+<skill>
+	<name>Fireball</name>
+	<classid>1</classid>
+	<description>Do fire damage spell</description>
+</skill>
+<skill>
+	<name>Backstab</name>
+	<classid>2</classid>
+	<description>Do a stealth attack</description>
+</skill>
+<skill>
+	<name>Heal</name>
+	<classid>3</classid>
+	<description>Heal yourself</description>
+</skill>
+</skills>
