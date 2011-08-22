@@ -3,30 +3,44 @@ import java.util.Scanner;
 
 public class createchar {
 	
-	private String name;
-	private String sclass;
-	private int iclass;
-	private int classCounter = 0;
 	Scanner input = new Scanner(System.in);
 	
-	public void askName(){		
+	public createchar(){		
+		String name;
+		String userClass;
+		Integer classInt = 0;
 		System.out.println("Choose your name:");
 		name = input.nextLine();
-	}
-	
-	public void askClass(){	
-		do{
-			if(classCounter > 0){
-				System.out.println("Error. Please enter number from 1-3.");
-			}
-			System.out.println("Choose your class:");
-			System.out.println("1: Melee");
-			System.out.println("2: Mage");
-			System.out.println("3: Thief");
-			sclass = input.nextLine();
-			iclass = Integer.parseInt(sclass);
-			classCounter++;
-		}while(iclass != 1 && iclass != 2 && iclass != 3 );
+		boolean Bln = true;
+		do {
+			Bln = true;
+			System.out.println("Hi "+ name +"Choose your class:");
+			System.out.println("1. Warrior");
+			System.out.println("2. Mage");
+			System.out.println("3. Thief");
+			System.out.println("4. Healer");
+			userClass = input.nextLine();
 			
+			// probeer om string Userclass om te zetten naar integer
+			try  
+			   {  
+				classInt = Integer.parseInt( userClass );  
+			   }  
+			// als converteren niet lukt, geef error, zen Bln op false ( hierdoor wordt while opnieuw uitgevoert )
+			catch( Exception e)  
+			   {  
+				   System.out.println("Geen getal gekozen.");
+				   Bln = false;
+			   }
+			// als bij vorige stap geen error gebeurt ( Bln nog steeds true )
+			// kijk of classInt tussen 1 en 4 ligt, zo niet zet bln op false waardoor while opnieuw uitgevoert
+			if(Bln = true){
+				if(classInt < 1 || classInt > 4){
+					System.out.println("Gekozen getal ligt niet tussen 1 en 4.");
+					Bln = false;
+				}
+			}
+		}
+		while(Bln == false);
 	}
 }
