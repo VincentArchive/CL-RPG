@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
 public class character {
-	String name;
-	int classID;
-	int strength;
-	int stamina;
-	int inteligence;
-	int spirit;
-	int physresitance;
-	int magicresitance;
+	static String name;
+	static int classID;
+	static int strength;
+	static int stamina;
+	static int inteligence;
+	static int spirit;
+	static int physresitance;
+	static int magicresitance;
 	
 	public  character(String[] userData){
 		name = userData[0];
@@ -19,15 +19,8 @@ public class character {
 		spirit = Integer.parseInt( userData[5] ); 
 		physresitance = Integer.parseInt( userData[6] ); 
 		magicresitance = Integer.parseInt( userData[7] ); 
-		
 		System.out.println("Welcome "+ name);
-		System.out.println("Your stats are");
-		System.out.println("strength "+ strength);
-		System.out.println("stamina "+ stamina);
-		System.out.println("inteligence "+ inteligence);
-		System.out.println("spirit "+ spirit);
-		System.out.println("physresitance "+ physresitance);
-		System.out.println("magicresitance "+ magicresitance);
+		showStats();
 		pauseProg();
 		System.out.println("lalala");
 	}
@@ -37,4 +30,18 @@ public class character {
 		Scanner keyboard = new Scanner(System.in);
 		keyboard.nextLine();
 	}
+	
+	public static void showStats(){
+		System.out.println("Your stats are");
+		System.out.println("strength "+ strength);
+		System.out.println("stamina "+ stamina);
+		System.out.println("inteligence "+ inteligence);
+		System.out.println("spirit "+ spirit);
+		System.out.println("physresitance "+ physresitance);
+		System.out.println("magicresitance "+ magicresitance);
+	}
+	
+	
+	
+	
 }
