@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classes>
+<class>
+  <name>Warrior</name>
+  <id>0</id>
+  <strength>20</strength>
+  <stamina>15</stamina>
+  <inteligence>0</inteligence>
+  <spirit>0</spirit>
+  <physresitance>20</physresitance>
+  <magicresitance>5</magicresitance>
+</class>
+<class>
+  <name>Mage</name>
+  <id>1</id>
+  <strength>0</strength>
+  <stamina>0</stamina>
+  <inteligence>20</inteligence>
+  <spirit>15</spirit>
+  <physresitance>5</physresitance>
+  <magicresitance>20</magicresitance>
+</class>
+<class>
+  <name>Thief</name>
+  <id>2</id>
+  <strength>15</strength>
+  <stamina>20</stamina>
+  <inteligence>0</inteligence>
+  <spirit>0</spirit>
+  <physresitance>15</physresitance>
+  <magicresitance>10</magicresitance>
+</class>
+<class>
+  <name>Healer</name>
+  <id>3</id>
+  <strength>10</strength>
+  <stamina>0</stamina>
+  <inteligence>10</inteligence>
+  <spirit>20</spirit>
+  <physresitance>10</physresitance>
+  <magicresitance>15</magicresitance>
+</class>
+</classes>
