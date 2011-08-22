@@ -9,6 +9,7 @@ import javax.xml.parsers.DocumentBuilder;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException; 
 
+//excecute constructor
 public class createchar{
 	
 	Scanner input = new Scanner(System.in);
@@ -17,6 +18,8 @@ public class createchar{
 	int amountClasses;
 	
 	public createchar(){
+		
+		//get class names and id from XML file
 		getClassName();
 		
 		String name;
@@ -28,6 +31,7 @@ public class createchar{
 		do {
 			Bln = true;
 			System.out.println("Hi "+ name +" choose your class:");
+			//show all class names and ID
 			for(int counter=0; counter < amountClasses; counter++){
 				System.out.println( (counter+1) + ". " + classes[counter]);
 			}
