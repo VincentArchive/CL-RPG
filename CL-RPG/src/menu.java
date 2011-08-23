@@ -6,6 +6,9 @@ public class menu {
 
 
 	public static void showMenu() {
+		for(int i=0;i < 10; i++){
+			System.out.println("");
+		}
 		int optionInt = 0;
 		Scanner input = new Scanner(System.in);
 
@@ -45,6 +48,7 @@ public class menu {
 			character.showStats();
 			showMenu();
 		}else if(optionInt == 2){
+			character.showSkills();
 			showMenu();
 		}else if(optionInt == 3){
 			showMenu();

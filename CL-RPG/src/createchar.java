@@ -15,10 +15,12 @@ public class createchar{
 	Scanner input = new Scanner(System.in);
 	String[] classes = null;
 	String[] classData;
+	String[] skillData;
 	
 	int amountClasses;
 	String name;
 	Integer classInt = 0;
+	
 	
 	public createchar(){
 		
@@ -223,12 +225,84 @@ public class createchar{
         
 		//System.exit (0);
         
+        try {
+            DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+            Document doc = docBuilder.parse (new File("src/resources/skills.xml"));
+
+            doc.getDocumentElement ().normalize ();
+
+            NodeList listOfClasses = doc.getElementsByTagName("skill");
+
+            String skillID;
+            int skillIDint;
+            String skillName;
+            String skillDesc;
+
+
+            for(int s=0; s<listOfClasses.getLength() ; s++){
+
+
+                Node firstPersonNode = listOfClasses.item(s);
+                if(firstPersonNode.getNodeType() == Node.ELEMENT_NODE){
+
+
+                    Element firstClassElement = (Element)firstPersonNode;
+                    
+                    NodeList idList = firstClassElement.getElementsByTagName("classid");
+                    Element idElement = (Element)idList.item(0);
+                    NodeList textIdList = idElement.getChildNodes();                    
+                    skillID =((Node)textIdList.item(0)).getNodeValue().trim(); 
+                    
+                    skillIDint = Integer.parseInt( skillID ); 
+                    
+                    if(skillIDint == classIdChosen){
+                    	NodeList strengthList = firstClassElement.getElementsByTagName("name");
+                        Element strengthElement = (Element)strengthList.item(0);
+                        NodeList textStrengthList = strengthElement.getChildNodes();                    
+                        skillName =((Node)textStrengthList.item(0)).getNodeValue().trim(); 
+                        
+                        NodeList staminaList = firstClassElement.getElementsByTagName("description");
+                        Element staminaElement = (Element)staminaList.item(0);
+                        NodeList textStaminaList = staminaElement.getChildNodes();                    
+                        skillDesc =((Node)textStaminaList.item(0)).getNodeValue().trim(); 
+                        
+
+
+
+                        skillData = new String[]{skillName, skillDesc};
+                        
+                        
+                    }
+
+
+                }//end of if clause
+
+                
+            }//end of for loop with s var
+            
+
+        }catch (SAXParseException err) {
+        System.out.println ("** Parsing error" + ", line " 
+             + err.getLineNumber () + ", uri " + err.getSystemId ());
+        System.out.println(" " + err.getMessage ());
+
+        }catch (SAXException e) {
+        Exception x = e.getException ();
+        ((x == null) ? e : x).printStackTrace ();
+
+        }catch (Throwable t) {
+        t.printStackTrace ();
+        }
+        
+		//System.exit (0);
+        
 	}
 	
 	public String[] fetchUserData(){
 		String classString = Integer.toString(classInt);
 		String[] returnUserData;
-		returnUserData = new String[]{name, classString, classData[0], classData[1],classData[2],classData[3],classData[4],classData[4],classData[5],};
+		returnUserData = new String[]{name, classString, classData[0], classData[1],classData[2],classData[3],classData[4],classData[5],skillData[0], skillData[1]};
 		return returnUserData;
 		
 	}
