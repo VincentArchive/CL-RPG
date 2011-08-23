@@ -130,7 +130,7 @@ public class createchar{
         
 	}
 	
-	public void getUserStats(int classIdChosen){
+	private void getUserStats(int classIdChosen){
 
 		try {
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
