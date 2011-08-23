@@ -7,6 +7,7 @@ public class game {
 		
 		//pass data to character object
 		new character(createChar.fetchUserData());
+		menu.showMenu();
 	}
 	
 }

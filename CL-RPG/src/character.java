@@ -27,7 +27,7 @@ public class character {
 		System.out.println("Welcome "+ name);
 		showStats();
 		showSkills();
-		menu.showMenu();
+		
 	}
 	
 	public static void showSkills(){
