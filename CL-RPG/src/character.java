@@ -35,7 +35,7 @@ public class character {
 			System.out.println("");
 		}
 		System.out.println("Your skills are");
-		System.out.println(skillName);
+		System.out.println(skillName+ ":");
 		System.out.println(skillDesc);
 		menu.pauseProg();		
 	}
